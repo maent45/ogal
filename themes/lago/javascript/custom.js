@@ -10,9 +10,9 @@ $(document).ready(function() {
 
             $('.track_chooser_child').each(function() {
                 if ($(this).attr('data-difficulty-id') === self_difficulty) {
-                    $(this).css({'display':'block','opacity':'0'}).stop().animate({'opacity':'1'}, 750);
+                    $(this).css({'display':'inline-block','opacity':'0'}).stop().animate({'opacity':'1'});
                 } else {
-                    $(this).css({'display':'none','opacity':'1'}).stop().animate({'opacity':'0'}, 750);
+                    $(this).css({'display':'none','opacity':'1'}).stop().animate({'opacity':'0'});
                 }
             });
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
         // show all tracks
         $('.track_chooser_difficulty_filter_all').on('click', function(e) {
             e.preventDefault();
-            $('.track_chooser_child').css({'display':'block','opacity':'0'}).stop().animate({'opacity':'1'}, 750);
+            $('.track_chooser_child').css({'display':'inline-block','opacity':'0'}).stop().animate({'opacity':'1'});
         });
     }
 

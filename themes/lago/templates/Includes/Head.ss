@@ -11,6 +11,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <% require themedCSS('main') %>
+    <!--- google font --->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <%--<link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" />--%>
 
 </head>

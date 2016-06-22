@@ -28,7 +28,7 @@ class ActivityDetail extends Page {
         $fields->addFieldToTab('Root.Main', TextField::create('elevation', 'Elevation'), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('difficulty', 'Difficulty'), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('time', 'Time'), 'Content');
-        $fields->addFieldToTab('Root.Main', CheckBoxField::create('dogs_allowed', 'Time'), 'Content');
+        $fields->addFieldToTab('Root.Main', CheckBoxField::create('dogs_allowed', 'Dogs allowed?'), 'Content');
 
         $fields->addFieldToTab('Root.Main', $cover_img = UploadField::create('cover_img', 'Cover image'), 'Content');
 

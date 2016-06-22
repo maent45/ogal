@@ -1,13 +1,94 @@
-body {
-
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-// --- TRACKCHOOSER ---
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+// --- TRACK CHOOSER ---
 
 .TrackChooser {
 
+  @media only screen and (min-width: 320px) {
 
+    .track_chooser_difficulty_panel,
+    .track_chooser_children_wrapper {
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .track_chooser_panel {
+      background: lightgray;
+      width: 400px;
+      height: 100%;
+
+      .track_chooser_difficulty_panel {
+        background: black;
+        color: white;
+        width: 485px;
+        padding: 25px;
+
+        ul {
+
+          a {
+            color: #FFCC32;
+            width: 105px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 0px 0px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #FFCC32;
+          }
+
+        }
+
+      }
+
+      .track_chooser_children_wrapper {
+        padding: 25px;
+
+        ul {
+
+          a {
+            display: inline-block;
+            width: 150px;
+            height: 205px;
+            vertical-align: top;
+            margin: 15px 5px 0px;
+            position: relative;
+            overflow: hidden;
+          }
+
+          img {
+            width: 180px;
+            height: 150px;
+          }
+
+        }
+      }
+
+    }
+
+  }
 
 }
 
-// --- END TRACKCHOOSER ---
+// --- END TRACK CHOOSER ---
