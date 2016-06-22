@@ -13,11 +13,16 @@ class ActivityDetail extends Page {
     );
 
     private static $has_one = array (
-        'cover_img' => 'Image'
+        'cover_img' => 'Image',
+        'track_difficulty' => 'DifficultyLevel'
     );
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
+
+        $fields->addFieldToTab('Root.Main', HeaderField::create('Track details'), 'Content');
+        // track difficulty
+        $fields->addFieldToTab('Root.Main', DropdownField::create('track_difficultyID', 'Track difficulty', DifficultyLevel::get()->map('ID', 'difficulty_level')), 'Content');
 
         $fields->addFieldToTab('Root.Main', CheckBoxField::create('warning', 'Caution?'), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('elevation', 'Elevation'), 'Content');
