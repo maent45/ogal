@@ -6,7 +6,6 @@ project/
 /vendor/
 /cms/
 /framework/
-/vendor/
 /app/node_modules/
 /assets/
 /silverstripe-cache/
@@ -20,4 +19,5 @@ project/
 /siteconfig/
 /stats/
 dump.sql
+/sortablegridfield/
 

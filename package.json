@@ -1,0 +1,25 @@
+{
+  "name": "ogal",
+  "version": "1.0.0",
+  "description": "lago site",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maent45/ogal.git"
+  },
+  "author": "maent45",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maent45/ogal/issues"
+  },
+  "homepage": "https://github.com/maent45/ogal#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}
