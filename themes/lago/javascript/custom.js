@@ -9,7 +9,9 @@ $(document).ready(function() {
             var self_difficulty = $(this).attr('data-difficulty-id');
 
             $('.track_chooser_child').each(function() {
+
                 if ($(this).attr('data-difficulty-id') === self_difficulty) {
+
                     $(this).css({'display':'inline-block','opacity':'0'}).stop().animate({'opacity':'1'});
                 } else {
                     $(this).css({'display':'none','opacity':'1'}).stop().animate({'opacity':'0'});
