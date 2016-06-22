@@ -3,8 +3,11 @@
 <!--- difficulty levels --->
 <% if $difficulty_levels %>
     <ul>
+        <a href="#" class="track_chooser_difficulty_filter_all">
+            <li>All</li>
+        </a>
         <% loop $difficulty_levels %>
-            <a href="#">
+            <a href="#" data-difficulty-id="$ID" class="track_chooser_difficulty_filter">
                 <li>$difficulty_level</li>
             </a>
         <% end_loop %>
@@ -16,7 +19,7 @@
     <div class="track_chooser_children_wrapper">
         <ul>
             <% loop $Children %>
-                <a href="$Link">
+                <a href="$Link" data-difficulty-id="$track_difficulty.ID" class="track_chooser_child">
                     <% if $cover_img %>
                         <img src="$cover_img.URL" alt="$Title cover image">
                     <% end_if %>
