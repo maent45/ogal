@@ -42,4 +42,15 @@ class ActivityDetail extends Page {
 
 class ActivityDetail_Controller extends Page_Controller {
 
+    // if request is ajax
+    public function index(SS_HTTPRequest $request) {
+
+        if($request->isAjax()) {
+            return $this->renderWith("ActivityDetailAjax");
+        } else {
+            return array();
+        }
+
+    }
+
 }

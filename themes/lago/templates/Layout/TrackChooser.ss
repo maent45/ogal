@@ -18,6 +18,10 @@
                 <% end_loop %>
             </ul>
         <% end_if %>
+        <!--- following wrapper loaded via ajax --->
+        <div class="track_chooser_activity_detail_page_info">
+            <% include ActivityDetailAjax %>
+        </div>
     </div>
 
     <!--- activity details --->

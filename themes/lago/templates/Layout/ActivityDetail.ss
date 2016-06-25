@@ -5,23 +5,7 @@
 
     <!--- track details --->
     <div class="activity_detail_info_wrapper">
-        <h3>$Title</h3>
-        <ul>
-            <% if $warning %>
-                <li>caution</li>
-            <% end_if %>
-            <li>$elevation</li>
-            <li>$difficulty</li>
-            <li>$time</li>
-            <% if $dogs_allowed %>
-                <li>dogs allowed</li>
-            <% end_if %>
-        </ul>
-
-        <div class="activity_detail_content_wrapper">
-            <img src="$cover_img.URL" align="$Title cover image">
-            $Content
-        </div>
+        <% include ActivityDetailAjax %>
     </div>
 
     <!--- reviews section  --->
