@@ -7,7 +7,9 @@
 		"silverstripe/framework": "3.3.1",
 		"silverstripe/reports": "3.3.1",
 		"silverstripe/siteconfig": "3.3.1",
-		"silverstripe-themes/simple": "3.1.*"
+		"silverstripe-themes/simple": "3.1.*",
+		"silverstripe-australia/memberprofiles": "^1.2",
+			"silverstripe/comments": "*"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7"

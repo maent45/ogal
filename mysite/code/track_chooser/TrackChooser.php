@@ -11,6 +11,7 @@ class TrackChooser extends Page {
     );
 
     private static $db = array (
+        'maps_api_key' => 'Text',
         'difficulty_levels_heading' => 'Varchar',
         'suggestions_heading' => 'Varchar'
     );
@@ -21,7 +22,8 @@ class TrackChooser extends Page {
 
         $conf=GridFieldConfig_RelationEditor::create(10);
 
-        $fields->addFieldToTab('Root.Main', TextField::create('suggestions_heading', 'Suggestions heading'), 'Content');
+        $fields->addFieldToTab('Root.GoogleMapsAPI', TextField::create('maps_api_key', 'Google maps api key'));
+        $fields->addFieldToTab('Root.Main', TextField::create('suggestions_heading', 'Suggestions heading'),'Content');
         $fields->addFieldToTab('Root.TrackDifficultyLevels', TextField::create('difficulty_levels_heading', 'Levels heading'));
 
         $fields->addFieldToTab('Root.TrackDifficultyLevels', GridField::create(

@@ -4,9 +4,87 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1cd36c269979d86379780225e43d749c",
-    "content-hash": "1626c28f3500b54461eb041dbd9cdeb8",
+    "hash": "5372a38abc5a49115a9bd1eb2cf6cd4a",
+    "content-hash": "405a7c575b74473f45af73372e1acb93",
     "packages": [
+        {
+            "name": "assertchris/hash-compat",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/assertchris/hash-compat.git",
+                "reference": "085131ed20472cf0716b969890d38e7ed2c8ccb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/assertchris/hash-compat/zipball/085131ed20472cf0716b969890d38e7ed2c8ccb0",
+                "reference": "085131ed20472cf0716b969890d38e7ed2c8ccb0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/hash.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Pitt",
+                    "email": "cgpitt@gmail.com"
+                }
+            ],
+            "description": "Provides forward compatibility with the hash_* functions that ship with PHP 5.5",
+            "time": "2015-05-05 23:42:48"
+        },
+        {
+            "name": "colymba/gridfield-bulk-editing-tools",
+            "version": "v2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
+                "reference": "29482dbd17e42c3de364aa3d46d20ba65175c9d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/29482dbd17e42c3de364aa3d46d20ba65175c9d3",
+                "reference": "29482dbd17e42c3de364aa3d46d20ba65175c9d3",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": ">=3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Simplified"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Francois",
+                    "homepage": "http://colymba.com"
+                },
+                {
+                    "name": "GitHub contributors",
+                    "homepage": "https://github.com/colymba/GridFieldBulkEditingTools/contributors"
+                }
+            ],
+            "description": "SilverStripe 3 GridField component to upload images and edit records in bulk",
+            "homepage": "https://github.com/colymba/GridFieldBulkEditingTools",
+            "keywords": [
+                "Image upload",
+                "bulk upload",
+                "gridfield bulk upload",
+                "silverstripe"
+            ],
+            "time": "2016-04-11 19:31:21"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.25",
@@ -108,6 +186,62 @@
             "time": "2016-04-13 19:46:30"
         },
         {
+            "name": "silverstripe-australia/memberprofiles",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-australia/silverstripe-memberprofiles.git",
+                "reference": "7c3e45f2634d17d9ae83804a2fb84b871f481d88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-memberprofiles/zipball/7c3e45f2634d17d9ae83804a2fb84b871f481d88",
+                "reference": "7c3e45f2634d17d9ae83804a2fb84b871f481d88",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "replace": {
+                "ajshort/silverstripe-memberprofiles": "self.version",
+                "silverstripe/memberprofiles": "self.version"
+            },
+            "suggest": {
+                "ajshort/silverstripe-gridfieldextensions": "Allows drag-and-drop reordering of fields"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                },
+                "installer-name": "memberprofiles",
+                "screenshots": [
+                    "http://ajshort.github.com/silverstripe-memberprofiles/screenshots/edit-profile.png",
+                    "http://ajshort.github.com/silverstripe-memberprofiles/screenshots/cms-profile-fields.png",
+                    "http://ajshort.github.com/silverstripe-memberprofiles/screenshots/member-list.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                }
+            ],
+            "description": "Member registration and profile management",
+            "keywords": [
+                "member",
+                "profile",
+                "registration",
+                "silverstripe"
+            ],
+            "time": "2016-04-10 23:34:15"
+        },
+        {
             "name": "silverstripe-themes/simple",
             "version": "3.1.0",
             "source": {
@@ -196,6 +330,55 @@
                 "silverstripe"
             ],
             "time": "2016-02-29 02:01:55"
+        },
+        {
+            "name": "silverstripe/comments",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-comments.git",
+                "reference": "93ddc3cc0872ee9d3114ec5a3c7c1e6da74d3b5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-comments/zipball/93ddc3cc0872ee9d3114ec5a3c7c1e6da74d3b5f",
+                "reference": "93ddc3cc0872ee9d3114ec5a3c7c1e6da74d3b5f",
+                "shasum": ""
+            },
+            "require": {
+                "assertchris/hash-compat": "~1.0",
+                "colymba/gridfield-bulk-editing-tools": "~2.1",
+                "silverstripe/framework": "~3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "suggest": {
+                "ezyang/htmlpurifier": "Standards compliant HTML filter written in PHP",
+                "silverstripe/cms": "The SilverStripe Content Management System"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "This module provides commenting functionality for Pages and other DataObjects on your SilverStripe site.",
+            "keywords": [
+                "comments",
+                "silverstripe"
+            ],
+            "time": "2016-05-18 05:03:24"
         },
         {
             "name": "silverstripe/framework",
