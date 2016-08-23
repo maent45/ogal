@@ -52,13 +52,13 @@
                         <p>Caution</p>
                     <% end_if %>
                     <p>$elevation</p>
-                    -----
-                    <% if $track_difficulty.difficulty_level %>
-                        <% loop $track_difficulty.difficulty_level %>
-                            <p>$track_difficulty.difficulty_level</p>
+
+                    <% if $track_difficulty %>
+                        <% loop $track_difficulty %>
+                            $difficulty_level
                         <% end_loop %>
                     <% end_if %>
-                    -----
+
                     <p>$time</p>
                     <% if $dogs_allowed%>
                         <p>Dogs allowed</p>

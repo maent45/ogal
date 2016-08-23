@@ -22,7 +22,11 @@ class Track extends DataObject {
         $fields = FieldList::create(
 
             TextField::create('track_name', 'Track name'),
-            DropdownField::create('track_difficultyID', 'Track difficulty', DifficultyLevel::get()->map('ID', 'difficulty_level'))
+            DropdownField::create(
+                'track_difficultyID',
+                'Track difficulty',
+                DifficultyLevel::get()->map('ID', 'difficulty_level'))
+                ->setEmptyString('(Select one)')
                 ->setRightTitle('Used to filter tracks based on their difficulty level'),
             UploadField::create('image', 'Track main image')
                 ->setFolderName('activity-details-images')
