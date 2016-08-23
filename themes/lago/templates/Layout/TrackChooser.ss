@@ -26,31 +26,43 @@
     </div>
 
     <!--- activity details --->
-    ; <% if $Children %>
-    ;     <div class="track_chooser_children_wrapper">
-    ;         <h3>$suggestions_heading</h3>
-    ;         <ul>
-    ;             <% loop $Children %>
-    ;                 <a href="$Link" data-difficulty-id="$track_difficulty.ID" class="track_chooser_child">
-    ;                     <% if $cover_img %>
-    ;                         <img src="$cover_img.URL" alt="$Title cover image">
-    ;                     <% end_if %>
-    ;                     <li>$Title</li>
-    ;                 </a>
-    ;             <% end_loop %>
-    ;         </ul>
-    ;     </div>
-    ; <% end_if %>
+    <%--<% if $Children %>--%>
+         <%--<div class="track_chooser_children_wrapper">--%>
+             <%--<h3>$suggestions_heading</h3>--%>
+             <%--<ul>--%>
+                 <%--<% loop $Children %>--%>
+                     <%--<a href="$Link" data-difficulty-id="$track_difficulty.ID" class="track_chooser_child">--%>
+                         <%--<% if $cover_img %>--%>
+                             <%--<img src="$cover_img.URL" alt="$Title cover image">--%>
+                         <%--<% end_if %>--%>
+                         <%--<li>$Title</li>--%>
+                     <%--</a>--%>
+                 <%--<% end_loop %>--%>
+             <%--</ul>--%>
+         <%--</div>--%>
+    <%--<% end_if %>--%>
 
     <!--- tracks --->
     <% if $tracks %>
         <ul>
             <% loop $tracks %>
-                <li>$track_name</li>
+                <li>
+                    <h3>$track_name</h3>
+                    <% if $warning %>
+                        <p>Caution</p>
+                    <% end_if %>
+                    <p>$elevation</p>
+                    <p>$difficulty</p>
+                    <p>$time</p>
+                    <% if $dogs_allowed%>
+                        <p>Dogs allowed</p>
+                    <% end_if %>
+                    <p>maps_address</p>
+                </li>
             <% end_loop %>
         </ul>        
     <% end_if %>
-
+    span    
 </div>
 
  <!--- map section --->
