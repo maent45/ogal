@@ -7,6 +7,7 @@ class TrackChooser extends Page {
     );
 
     private static $has_many = array (
+        'tracks' => 'Track',
         'difficulty_levels' => 'DifficultyLevel'
     );
 
@@ -26,12 +27,21 @@ class TrackChooser extends Page {
         $fields->addFieldToTab('Root.Main', TextField::create('suggestions_heading', 'Suggestions heading'),'Content');
         $fields->addFieldToTab('Root.TrackDifficultyLevels', TextField::create('difficulty_levels_heading', 'Levels heading'));
 
+        // difficulties dataobject
         $fields->addFieldToTab('Root.TrackDifficultyLevels', GridField::create(
             'difficulty_levels',
             'Track difficulty levels',
             $this->difficulty_levels(),
             $conf
         ));
+
+        // tracks dataobjects
+        $fields->addFieldToTab('Root.Tracks', GridField::create(
+            'tracks',
+            'Tracks',
+            $this->tracks(),
+            $conf
+        ));        
 
         return $fields;
 

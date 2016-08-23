@@ -9,7 +9,8 @@ class ActivityDetail extends Page {
         'elevation' => 'Varchar',
         'difficulty' => 'Varchar',
         'time' => 'Varchar',
-        'dogs_allowed' => 'Boolean'
+        'dogs_allowed' => 'Boolean',
+        'maps_address' => 'Text'
     );
 
     private static $has_one = array (
@@ -21,6 +22,8 @@ class ActivityDetail extends Page {
         $fields = parent::getCMSFields();
 
         $fields->addFieldToTab('Root.Main', HeaderField::create('Track details'), 'Content');
+        
+        $fields->addFieldToTab('Root.Main', TextField::create('maps_address', 'Address on map'), 'Content');
         // track difficulty
         $fields->addFieldToTab('Root.Main', DropdownField::create('track_difficultyID', 'Track difficulty', DifficultyLevel::get()->map('ID', 'difficulty_level')), 'Content');
 

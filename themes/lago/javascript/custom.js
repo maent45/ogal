@@ -42,9 +42,9 @@ $(document).ready(function() {
                 // populate this div with ajax'd content
                 $('.track_chooser_activity_detail_page_info').hide().html(response).stop().fadeIn(500);
 
-                // $('html, body').animate({
-                //     scrollTop: $('.track_chooser_difficulty_panel').offset().top
-                // });
+                $('html, body').animate({
+                    scrollTop: $('.track_chooser_difficulty_panel').offset().top
+                });
 
                 // update url to reflect clicked link
                 window.history.pushState(
