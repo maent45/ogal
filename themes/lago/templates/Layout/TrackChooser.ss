@@ -52,17 +52,27 @@
                         <p>Caution</p>
                     <% end_if %>
                     <p>$elevation</p>
-                    <p>$difficulty</p>
+                    -----
+                    <% if $track_difficulty.difficulty_level %>
+                        <% loop $track_difficulty.difficulty_level %>
+                            <p>$track_difficulty.difficulty_level</p>
+                        <% end_loop %>
+                    <% end_if %>
+                    -----
                     <p>$time</p>
                     <% if $dogs_allowed%>
                         <p>Dogs allowed</p>
                     <% end_if %>
                     <p>maps_address</p>
+                    <% if $track_desc %>
+                        $track_desc
+                    <% end_if %>
+                    $image
                 </li>
             <% end_loop %>
         </ul>        
     <% end_if %>
-    span    
+
 </div>
 
  <!--- map section --->
