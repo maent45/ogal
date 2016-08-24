@@ -25,28 +25,11 @@
         <% end_if %>
     </div>
 
-    <!--- activity details --->
-    <%--<% if $Children %>--%>
-         <%--<div class="track_chooser_children_wrapper">--%>
-             <%--<h3>$suggestions_heading</h3>--%>
-             <%--<ul>--%>
-                 <%--<% loop $Children %>--%>
-                     <%--<a href="$Link" data-difficulty-id="$track_difficulty.ID" class="track_chooser_child">--%>
-                         <%--<% if $cover_img %>--%>
-                             <%--<img src="$cover_img.URL" alt="$Title cover image">--%>
-                         <%--<% end_if %>--%>
-                         <%--<li>$Title</li>--%>
-                     <%--</a>--%>
-                 <%--<% end_loop %>--%>
-             <%--</ul>--%>
-         <%--</div>--%>
-    <%--<% end_if %>--%>
-
-    <!--- tracks --->
     <% if $tracks %>
-        <ul>
+        <!--- tracks detail view --->
+        <ul class="track_detail_view_wrapper">
             <% loop $tracks %>
-                <li class="track" data-difficulty-id="$track_difficulty.ID">
+                <li class="track" id="$ID">
                     <h3>$track_name</h3>
                     <% if $warning %>
                         <p>Caution</p>
@@ -70,7 +53,20 @@
                     $image
                 </li>
             <% end_loop %>
-        </ul>        
+        </ul>
+
+        <!--- tracks thumbnails --->
+        <ul class="tracks_thumbnails_wrapper">
+            <h3>Suggestions</h3>
+            <% loop $tracks %>
+                <a href="#" class="track_thumbnail" id="$ID" data-difficulty-id="$track_difficulty.ID">
+                    <li>
+                        $image.SetWidth(450)
+                    </li>
+                </a>
+            <% end_loop %>
+        </ul>
+
     <% end_if %>
 
 </div>
