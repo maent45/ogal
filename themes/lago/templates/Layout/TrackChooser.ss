@@ -30,27 +30,33 @@
         <ul class="track_detail_view_wrapper">
             <% loop $tracks %>
                 <li class="track" id="$ID">
+
                     <h3>$track_name</h3>
-                    <% if $warning %>
-                        <p>Caution</p>
-                    <% end_if %>
-                    <p>$elevation</p>
 
-                    <% if $track_difficulty %>
-                        <% loop $track_difficulty %>
-                            $difficulty_level
-                        <% end_loop %>
-                    <% end_if %>
+                    <div class="track_header_desc">
+                        <% if $warning %>
+                            <p>Caution</p>
+                        <% end_if %>
+                        <p>$elevation</p>
 
-                    <p>$time</p>
-                    <% if $dogs_allowed%>
-                        <p>Dogs allowed</p>
-                    <% end_if %>
-                    <p>maps_address</p>
+                        <% if $track_difficulty %>
+                            <% loop $track_difficulty %>
+                                <p>$difficulty_level</p>
+                            <% end_loop %>
+                        <% end_if %>
+
+                        <p>$time</p>
+                        <% if $dogs_allowed%>
+                            <p>Dogs allowed</p>
+                        <% end_if %>
+                        <p>$maps_address</p>
+                    </div>
+
                     <% if $track_desc %>
                         $track_desc
                     <% end_if %>
-                    $image
+
+                    $image.SetWidth(768)
                 </li>
             <% end_loop %>
         </ul>

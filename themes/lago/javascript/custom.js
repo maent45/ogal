@@ -37,8 +37,6 @@ $(document).ready(function() {
 
             e.preventDefault();
 
-            console.log('clicked');
-
             var self = $(this);
             // get all tracks from prev ul
             var self_detail_view = self.closest('ul').prev('.track_detail_view_wrapper').find('.track');
@@ -51,7 +49,7 @@ $(document).ready(function() {
 
                 } else {
 
-                    $(this).stop().fadeOut();
+                    $(this).hide();
 
                 }
 
