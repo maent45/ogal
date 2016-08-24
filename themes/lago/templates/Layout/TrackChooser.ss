@@ -46,7 +46,7 @@
     <% if $tracks %>
         <ul>
             <% loop $tracks %>
-                <li>
+                <li class="track" data-difficulty-id="$track_difficulty.ID">
                     <h3>$track_name</h3>
                     <% if $warning %>
                         <p>Caution</p>

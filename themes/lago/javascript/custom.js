@@ -9,7 +9,7 @@ $(document).ready(function() {
 
             var self_difficulty = $(this).attr('data-difficulty-id');
 
-            $('.track_chooser_child').each(function() {
+            $('.track').each(function() {
 
                 if ($(this).attr('data-difficulty-id') === self_difficulty) {
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
         // show all tracks
         $('.track_chooser_difficulty_filter_all').on('click', function(e) {
             e.preventDefault();
-            $('.track_chooser_child').css({'display':'inline-block','opacity':'0'}).stop().animate({'opacity':'1'});
+            $('.track').css({'display':'inline-block','opacity':'0'}).stop().animate({'opacity':'1'});
         });
 
 
