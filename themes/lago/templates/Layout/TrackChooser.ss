@@ -65,7 +65,7 @@
         <ul class="tracks_thumbnails_wrapper">
             <h3>Suggestions</h3>
             <% loop $tracks %>
-                <a href="#" class="track_thumbnail" id="$ID" data-difficulty-id="$track_difficulty.ID" data-lat-long="$maps_address">
+                <a href="#" class="track_thumbnail" id="$ID" data-difficulty-id="$track_difficulty.ID" data-static-address="$maps_address">
                     <li>
                         $image.SetWidth(450)
                     </li>
