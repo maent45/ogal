@@ -26,60 +26,57 @@
 
         <script>
 
-            // initialize the map
+            var map;
+            var marker;
+
             function initialize() {
-                var mapProp = {
-                    center:new google.maps.LatLng(51.508742, -0.120850),
-                    zoom: 7,
+
+                var mapOptions = {
+                    center: new google.maps.LatLng(40.680898,-8.684059),
+                    zoom: 11,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                // create map object
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
-                // create new instance of geocoder
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+            function searchAddress() {
+
+                var addressInput = $('.track_thumbnail').attr('data-static-address');
+
                 var geocoder = new google.maps.Geocoder();
 
-                $('.track_thumbnail').on('click', function() {
-                    // call geocodeTrackAddress method
-                    geocodeTrackAddress(geocoder, map);
-                });
+                geocoder.geocode({address: addressInput}, function(results, status) {
 
-            }
+                    if (status == google.maps.GeocoderStatus.OK) {
 
-            /* GEOCODE STATIC ADDRESS */
-            function geocodeTrackAddress(geocoder, resultsMap) {
+                        var myResult = results[0].geometry.location;
 
-                var track_address = $('.track_thumbnail').attr('data-static-address');
+                        createMarker(myResult);
 
-                geocoder.geocode({'address': track_address}, function(results, status) {
+                        map.setCenter(myResult);
 
-                    if (status === 'OK') {
-                        resultsMap.setCenter(results[0].geometry.location);
-
-                        // create map marker and add to location
-                        var marker = new google.maps.Marker({
-                            map: resultsMap,
-                            position: results[0].geometry.location
-                        });
-
-                    } else {
-
-                        alert('Geocode was not successful for the following reason: ' + status);
-
+                        map.setZoom(17);
                     }
-
                 });
 
             }
-            /* END GEOCODE STATIC ADDRESS */
 
-            $('.track_thumbnail').on('click', function() {
-                console.log($(this).attr('data-static-address'));
-            });
+            function createMarker(latlng) {
 
-            // event listener to load map
-            google.maps.event.addDomListener(window, 'load', initialize);
+                if(marker != undefined && marker != ''){
+                    marker.setMap(null);
+                    marker = '';
+                }
+
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: latlng
+                });
+            }
 
         </script>
 
