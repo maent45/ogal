@@ -34,12 +34,31 @@ body {
 /* END GLOBAL STYLES */
 
 // --- MAPS ---
+@media only screen and (min-width: 100px) {
 
-#googleMap {
-  display: inline-block;
-  vertical-align: top;
-  width: 69.5%;
-  height: 100vh;
+  #googleMap {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 50vh;
+  }
+
 }
 
+@media only screen and (min-width: 768px) {
+
+  #googleMap {
+    height: 100vh;
+    width: 59.5%;
+  }
+
+}
+
+@media only screen and (min-width: 1224px) {
+
+  #googleMap {
+    width: 69.5%;
+  }
+
+}
 // --- END MAPS ---
