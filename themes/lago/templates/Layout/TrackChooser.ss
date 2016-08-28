@@ -5,10 +5,6 @@
 
     <!--- difficulty levels --->
     <div class="track_chooser_difficulty_panel">
-        <!--- following wrapper content loaded via ajax --->
-        <div class="track_chooser_activity_detail_page_info">
-            <% include ActivityDetailAjax %>
-        </div>
 
         <h3>$difficulty_levels_heading</h3>
         <% if $difficulty_levels %>
@@ -23,6 +19,7 @@
                 <% end_loop %>
             </ul>
         <% end_if %>
+
     </div>
 
     <% if $tracks %>
@@ -78,4 +75,4 @@
 </div>
 
  <!--- map section --->
-<div id="googleMap"></div> 
+<div id="googleMap"></div>

@@ -2,10 +2,6 @@
 
 class TrackChooser extends Page {
 
-    private static $allowed_children = array (
-        'ActivityDetail'
-    );
-
     private static $has_many = array (
         'tracks' => 'Track',
         'difficulty_levels' => 'DifficultyLevel'
