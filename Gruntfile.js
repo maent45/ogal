@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "themes/lago/css/main.css": "themes/lago/less/main.less" // destination file and source file
+                    "themes/lago/css/main.css": "themes/lago/less/main.less",
+                    "themes/lago/css/track_chooser_base.css": "themes/lago/less/page_types/track_chooser/track_chooser_base.less" // destination file and source file
                 }
             }
         },
