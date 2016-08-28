@@ -9,11 +9,13 @@
       background: lightgrey;
       width: 100%;
       box-sizing: border-box;
+      border-bottom: 2px solid @deep_orange;
 
       .user_nav_bar_left {
         background: @yellowish_background;
         padding: 25px;
-        
+        box-sizing: border-box;
+
         a {
           color: @copy_color;
           width: 100%;
@@ -51,12 +53,22 @@
     }
 
     .track_chooser_panel {
+      float: left;
       background: @black;
       color: @white;
       width: 100%;
       height: 100%;
       display: inline-block;
       vertical-align: top;
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+        border: 0;
+        font-size: 16px;
+        background: lightyellow;
+      }
 
       .track_chooser_difficulty_panel {
         background: black;
@@ -121,10 +133,9 @@
     /* USER NAV BAV */
     .user_nav_bar {
 
-
       .user_nav_bar_left {
         width: 50%;
-        padding: 0px 25px;
+        padding: 10px 25px 0px;
         height: 75px;
 
         a {
@@ -148,6 +159,8 @@
 
     .track_chooser_panel {
       width: 40%;
+      height: 100vh;
+      overflow-y: scroll;
     }
 
   }

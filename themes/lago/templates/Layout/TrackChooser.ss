@@ -1,5 +1,10 @@
+
 <!--- left panel --->
 <div class="track_chooser_panel">
+    <!--- search input --->
+    <div class="search_wrapper">
+        <input type="text" placeholder="Search">
+    </div>
 
     <!--- difficulty levels --->
     <div class="track_chooser_difficulty_panel">
