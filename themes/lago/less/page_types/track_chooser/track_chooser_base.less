@@ -1,8 +1,35 @@
-// --- TRACK CHOOSER ---
+@import "themes/lago/less/main.less";
 
 .TrackChooser {
 
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 100px) {
+
+    /* USER NAV BAV */
+    .user_nav_bar {
+      background: lightgrey;
+      width: 100%;
+
+      .user_nav_bar_left {
+        background: @yellowish_background;
+        padding: 25px;
+        
+        a {
+          color: @copy_color;
+          width: 100%;
+          display: inline-block;
+          padding: 10px 0px;
+          box-sizing: border-box;
+        }
+
+        img {
+          width: 50px;
+          margin: 0px;
+        }
+        
+      }
+
+    }
+    /* END USER NAV BAV */
 
     .track_chooser_difficulty_panel,
     .track_chooser_children_wrapper {
@@ -26,12 +53,48 @@
 
   @media only screen and (min-width: 768px) {
 
+    /* USER NAV BAV */
+    .user_nav_bar {
+
+      .user_nav_bar_left {
+        width: 50%;
+
+        a {
+          width: 25%;
+        }
+
+        img {
+          width: 50px;
+          margin: 0px;
+        }
+
+        p {
+          width: 30%;
+          display: inline-block;
+        }
+
+      }
+
+    }
+    /* END USER NAV BAV */
+
   }
 
   @media only screen and (min-width: 1200px) {
 
+    /* USER NAV BAV */
+    .user_nav_bar {
+
+      .user_nav_bar_left {
+        width: 30%;
+      }
+
+    }
+    /* END USER NAV BAV */
+
     .track_chooser_panel {
-      background: lightgray;
+      background: @black;
+      color: @white;
       width: 30%;
       height: 100%;
       display: inline-block;

@@ -1,13 +1,16 @@
-<h1>header section</h1>
-<!--- nav --->
-<nav>
-    <% if $Menu(1) %>
-        <ul>
-            <% loop $Menu(1) %>
+<!--- user nav bar --->
+<div class="user_nav_bar">
+
+    <div class="user_nav_bar_left">
+        <% if $Children %>
+            <% loop $Children %>
                 <a href="$Link">
-                    <li>$Title</li>
+                    $MenuTitle
                 </a>
             <% end_loop %>
-        </ul>
-    <% end_if %>
-</nav>
+        <% end_if %>
+        <img src="http://1.gravatar.com/avatar/767fc9c115a1b989744c75">
+        <p>B.Watson</p>
+    </div>
+
+</div>

@@ -1,5 +1,3 @@
-<h3>$Title</h3>
-
 <!--- left panel --->
 <div class="track_chooser_panel">
 
@@ -76,3 +74,7 @@
 
  <!--- map section --->
 <div id="googleMap"></div>
+<%--$commentsForm--%>
+<%--<% loop $comments %>--%>
+    <%--$comments--%>
+<%--<% end_loop %>--%>
