@@ -30,6 +30,7 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
+		'logout'
 	);
 
 	public function init() {
@@ -39,6 +40,11 @@ class Page_Controller extends ContentController {
 	}
 
 	/* --- MEMBERSHIP MODULE FUNCTIONS --- */
+	// get member profile page
+	public function memberProfilePage() {
+		return DataObject::get_one('MemberProfilePage');
+	}
+
 	// check if user is logged in
 	public function getLoggedIn() {
 		if (!Member::currentUserID()) {
@@ -67,9 +73,11 @@ class Page_Controller extends ContentController {
 	}
 
 	// user logout
-	public function logout() {
-		Security::logout(false);
-		Director::redirect("home/");
+	// Works as long as homepage URL segment is 'home'
+	public function logout($redirect = true) {
+		$member = Member::currentUser();
+		if($member) $member->logOut();
+		$this->redirect('home/');
 	}
 	/* --- END MEMBERSHIP MODULE FUNCTIONS --- */
 

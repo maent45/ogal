@@ -21,13 +21,23 @@
         <% if $getLoggedIn %>
             <% control $currentUser %>
                 <% if $FirstName && $Surname %>
-                    <p>$FirstName $Surname</p>
+                    $FirstName $Surname
+                    <% if $Top.memberProfilePage %>
+                        <% loop $Top.memberProfilePage %>
+                            <a href="$Link">Edit profile</a>
+                        <% end_loop %>
+                    <% end_if %>
                 <% else_if $FirstName %>
-                    <p>$FirstName</p>
+                    <a href="$currentUser.Profile">$FirstName</a>
                 <% else %>
-                    <p>$Email</p>
+                    <p>
+                        <a href="$currentUser.Profile">$Email</a>
+                    </p>
                 <% end_if %>
+                <a href="home/logout">Log out</a>
             <% end_control %>
+        <% else %>
+            <a href="Security/login?BackURL=$Link">Login</a>
         <% end_if %>
 
     </div>
