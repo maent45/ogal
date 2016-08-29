@@ -9,4 +9,21 @@
             <% end_loop %>
         </ul>
     <% end_if %>
+
+    <% if $getLoggedIn %>
+        <ul>
+            <a href="home/logout">
+                <li>Log out</li>
+            </a>
+        </ul>
+    <% else %>
+        <ul>
+            <a href="Security/login?BackURL=$Link">
+                <li>
+                    Already registered? Login here
+                </li>
+            </a>
+        </ul>
+    <% end_if %>
+
 </nav>
