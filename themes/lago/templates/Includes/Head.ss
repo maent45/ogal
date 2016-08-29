@@ -11,6 +11,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <% require themedCSS('main') %>
+    <% require themedCSS('nav') %>
     <% require themedCSS('colors') %>
     <% require themedCSS('track_chooser_base') %>
     <!--- google font --->
