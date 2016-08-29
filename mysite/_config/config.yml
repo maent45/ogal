@@ -13,3 +13,8 @@ SSViewer:
 SiteTree:
   extensions:
     - CommentsExtension
+
+# custom extension registered site members
+Member:
+  extensions:
+    - MemberExtension

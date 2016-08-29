@@ -22,6 +22,7 @@
             <% control $currentUser %>
                 <% if $FirstName && $Surname %>
                     $FirstName $Surname
+                    $profile_pic.SetWidth(150)
                     <% if $Top.memberProfilePage %>
                         <% loop $Top.memberProfilePage %>
                             <a href="$Link">Edit profile</a>
