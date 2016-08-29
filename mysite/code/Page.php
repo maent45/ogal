@@ -7,6 +7,10 @@ class Page extends SiteTree {
 	private static $has_one = array(
 	);
 
+	public function homePage() {
+		return DataObject::get('HomePage');
+	}
+
 }
 class Page_Controller extends ContentController {
 

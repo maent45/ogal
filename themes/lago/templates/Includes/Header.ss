@@ -2,6 +2,12 @@
 <div class="user_nav_bar">
 
     <div class="user_nav_bar_left">
+        <% if $homePage %>
+            <% loop $homePage %>
+                <a href="$Link">$MenuTitle</a>
+            <% end_loop %>
+        <% end_if %>
+        
         <% if $Children %>
             <% loop $Children %>
                 <a href="$Link">

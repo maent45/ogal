@@ -1,1 +1,3 @@
 <% include Nav %>
+
+$Content
