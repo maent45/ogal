@@ -11,8 +11,6 @@
 
     <body class="$ClassName">
 
-        <% include Header %>
-
         <div class="main" role="main">
             $Layout
         </div>

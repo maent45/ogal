@@ -1,3 +1,4 @@
+<% include Header %>
 
 <!--- left panel --->
 <div class="track_chooser_panel">
@@ -67,7 +68,8 @@
             <% loop $tracks %>
                 <a href="#" class="track_thumbnail" id="$ID" data-difficulty-id="$track_difficulty.ID" data-static-address="$maps_address">
                     <li>
-                        $image.SetWidth(450)
+                        <div>$image.SetWidth(450)</div>
+                        <p>$track_name</p>
                     </li>
                 </a>
             <% end_loop %>
