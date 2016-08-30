@@ -2,11 +2,16 @@
 <nav class="main_nav">
     <!--- logged in username --->
     <% if $getLoggedIn %>
-        <% loop $currentUser %>
-            <% if $FirstName && $Surname %>
-                $FirstName $Surname
-            <% end_if %>
-        <% end_loop %>
+        <div class="main_nav_user_profile">
+            <% loop $currentUser %>
+                <% if $FirstName && $Surname %>
+                    $profile_pic.SetWidth(150)
+                    <p>$FirstName $Surname</p>
+                <% else_if $FirstName %>
+                    <a href="$currentUser.Profile">$FirstName</a>
+                <% end_if %>
+            <% end_loop %>
+        </div>
     <% end_if %>
 
     <ul>

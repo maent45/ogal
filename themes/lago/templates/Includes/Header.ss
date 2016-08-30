@@ -20,8 +20,8 @@
         <% if $getLoggedIn %>
             <% loop $currentUser %>
                 <% if $FirstName && $Surname %>
-                    $FirstName $Surname
                     $profile_pic.SetWidth(150)
+                    $FirstName $Surname
                     <% if $Top.memberProfilePage %>
                         <% loop $Top.memberProfilePage %>
                             <a href="$Link">Edit profile</a>
