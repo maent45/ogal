@@ -9,7 +9,8 @@
     padding: 0px;
   }
 
-  nav {
+  nav,
+  .main_page_title {
     display: none;
   }
 
@@ -29,15 +30,32 @@
 
         a {
           color: @copy_color;
-          width: 100%;
           display: inline-block;
           padding: 10px 0px;
           box-sizing: border-box;
+          vertical-align: middle;
+          margin: 0px 10px 0px;
         }
 
         img {
-          width: 50px;
+          width: 45px;
           margin: 0px;
+        }
+
+        .track_chooser_profile {
+          display: inline-block;
+          position: relative;
+
+          .track_chooser_logout_link {
+            display: none;
+            position: absolute;
+            right: 0px;
+            background: @deep_orange;
+            width: 50%;
+            text-align: right;
+            padding: 15px;
+          }
+
         }
         
       }
@@ -153,20 +171,14 @@
       .user_nav_bar_left {
         width: 50%;
         padding: 10px 25px 0px;
-        height: 75px;
 
         a {
-          width: 25%;
-        }
 
-        img {
-          width: 50px;
-          margin: 0px;
         }
 
         p {
-          width: 30%;
           display: inline-block;
+          vertical-align: text-bottom;
         }
 
       }

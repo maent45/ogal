@@ -3,6 +3,11 @@ $(document).ready(function() {
     // only load the following if page is TrackChooser
     if ($('body').hasClass('TrackChooser')) {
 
+        // trigger logout link
+        $('.track_chooser_logout_cta').on('click', function() {
+            $('.track_chooser_logout_link').toggle();
+        });
+
         // filter tracks by difficulty levels
         $('.track_chooser_difficulty_filter').on('click', function(e) {
             e.preventDefault();

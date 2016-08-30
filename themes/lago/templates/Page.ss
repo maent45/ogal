@@ -14,6 +14,8 @@
         <% include Nav %>
 
         <div class="main" role="main">
+            <h2 class="main_page_title">$MenuTitle</h2>
+
             $Layout
         </div>
 
