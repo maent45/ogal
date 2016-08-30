@@ -1,18 +1,28 @@
 @import "themes/lago/less/main.less";
 
 nav {
+  background: @light_black;
+  width: 100%;
+  padding: 35px 0px;
+  margin: 0px 0px 25px;
 
   @media only screen and (min-width: 100px) {
 
     ul {
       list-style-type: none;
       padding: 0px;
+      text-align: center;
 
       li {
+        text-align: left;
         padding: 25px;
         box-sizing: border-box;
         margin: 5px 0px;
-        background: @calm_green;
+        background: @deep_orange;
+        width: 290px;
+        display: inline-block;
+        vertical-align: top;
+        color: @light_black;
       }
 
       a {

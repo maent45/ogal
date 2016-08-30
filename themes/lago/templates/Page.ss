@@ -11,6 +11,8 @@
 
     <body class="$ClassName">
 
+        <% include Nav %>
+
         <div class="main" role="main">
             $Layout
         </div>

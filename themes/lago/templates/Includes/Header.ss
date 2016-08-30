@@ -15,11 +15,10 @@
                 </a>
             <% end_loop %>
         <% end_if %>
-        <%--<img src="http://1.gravatar.com/avatar/767fc9c115a1b989744c75">--%>
 
         <!--- only show following section if user is logged in --->
         <% if $getLoggedIn %>
-            <% control $currentUser %>
+            <% loop $currentUser %>
                 <% if $FirstName && $Surname %>
                     $FirstName $Surname
                     $profile_pic.SetWidth(150)
@@ -36,7 +35,7 @@
                     </p>
                 <% end_if %>
                 <a href="home/logout">Log out</a>
-            <% end_control %>
+            <% end_loop %>
         <% else %>
             <a href="Security/login?BackURL=$Link">Login</a>
         <% end_if %>
