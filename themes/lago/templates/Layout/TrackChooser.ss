@@ -34,6 +34,8 @@
 
                     <h3>$track_name</h3>
 
+                    <button type="submit">Add to trip</button>
+
                     <div class="track_header_desc">
                         <% if $warning %>
                             <p>Caution</p>
