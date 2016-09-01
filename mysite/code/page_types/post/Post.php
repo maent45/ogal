@@ -12,21 +12,17 @@ class Post extends Page {
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
+        // set config for gridfield
+        $conf = GridFieldConfig_RelationEditor::create(10);
+
         $fields->addFieldToTab('Root.Posts',
-            $gridfield = new GridField('Posts', 'All posts', Posts::get())
+            $gridfield = new GridField(
+                'Posts',
+                'All posts',
+                Posts::get(),
+                $conf
+            )
         );
-
-        // set gridfield config
-        $config = $gridfield->getConfig();
-
-        $dataColumns = $config->getComponentByType('GridFieldDataColumns');
-
-        $dataColumns->setDisplayFields(array(
-            'Email' => 'Email',
-            'Name' => 'Name',
-            'Topic' => 'Topic',
-            'Post' => 'Post'
-        ));
 
         return $fields;
     }

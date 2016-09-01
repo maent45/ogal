@@ -17,7 +17,7 @@ class TrackChooser extends Page {
 
         $fields = parent::getCMSFields();
 
-        $conf=GridFieldConfig_RelationEditor::create(10);
+        $conf = GridFieldConfig_RelationEditor::create(10);
 
         $fields->addFieldToTab('Root.GoogleMapsAPI', TextField::create('maps_api_key', 'Google maps api key'));
         $fields->addFieldToTab('Root.Main', TextField::create('suggestions_heading', 'Suggestions heading'),'Content');
