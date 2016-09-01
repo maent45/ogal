@@ -9,7 +9,27 @@
 
 class Post extends Page {
 
+    public function getCMSFields() {
+        $fields = parent::getCMSFields();
 
+        $fields->addFieldToTab('Root.Posts',
+            $gridfield = new GridField('Posts', 'All posts', Posts::get())
+        );
+
+        // set gridfield config
+        $config = $gridfield->getConfig();
+
+        $dataColumns = $config->getComponentByType('GridFieldDataColumns');
+
+        $dataColumns->setDisplayFields(array(
+            'Email' => 'Email',
+            'Name' => 'Name',
+            'Topic' => 'Topic',
+            'Post' => 'Post'
+        ));
+
+        return $fields;
+    }
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  *
- * This call represents all Post objects.
+ * This class represents all Post objects.
  * An instance of this class is called from the 'Post' class
  * to write all posts.
  *

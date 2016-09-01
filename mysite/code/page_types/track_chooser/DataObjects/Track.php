@@ -8,6 +8,10 @@ class Track extends DataObject {
         'image' => 'Image'
     );
 
+    private static $has_many = array (
+        'Reviews' => 'Review'
+    );
+
 	private static $db = array (
 		'track_name' => 'Varchar',
 		'warning' => 'Boolean',
