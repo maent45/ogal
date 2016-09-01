@@ -1,5 +1,12 @@
 <?php
 
+/*
+ *
+ * This class represents a post that will be submitted by users.
+ * All posts are saved into an instance of the 'Posts' dataobject.
+ *
+ * */
+
 class Post extends Page {
 
 
@@ -45,28 +52,24 @@ class Post_Controller extends Page_Controller {
      * */
 
     public function submit($data, $form) {
-        $email = new Email();
 
-        // set email address to send to
-        $email->setTo('johndoe@fakemail.com');
-        $email->setFrom($data['Email']);
-        $email->setSubject("Post from {$data['Name']}");
+        // create instance of the Posts object to save submitted posts into
+        $post_submission = new Posts();
 
-        $messageBody = "
-            <p><strong>Name:</strong> {$data['Name']}</p>
-            <p><strong>Message:</strong> {$data['Post']}</p>
-        ";
-        $email->setBody($messageBody);
-        // send email
-        $email->send();
+        $post_submission->write();
+        $form->saveInto($post_submission);
+        $post_submission->write();
 
-        return array (
-            // return feedback to user once submitted
-            'Content' => '<p>Shot for the post bro!</p>',
-            // return Form false to not render it
-            'Form' => ''
-        );
+        // redirect user back once submitted
+        return $this->redirectBack();
 
+    }
+
+    // get all Posts
+    public function submittedPosts() {
+        $posts = Posts::get();
+
+        return $posts;
     }
 
 }
