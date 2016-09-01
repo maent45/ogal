@@ -35,7 +35,7 @@
 
                         <h3>$track_name</h3>
 
-                        <button type="submit">Add to trip</button>
+                        <%--<button type="submit">Add to trip</button>--%>
 
                         <div class="track_header_desc">
                             <% if $warning %>
@@ -85,13 +85,20 @@
     <!--- user reviews section --->
     <div class="user_reviews">
         <h3>User Reviews</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <div class="user_reviews_reviewer_profile">
+            <img src="$ThemeDir/images/spiderman-icon.png">
+            <p>Boy Spiderman</p>
+        </div>
+        <div class="user_reviews_review">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        </div>
     </div>
 
 </div>
 
  <!--- map section --->
 <div id="googleMap"></div>
+
 <%--$commentsForm--%>
 <%--<% loop $comments %>--%>
     <%--$comments--%>

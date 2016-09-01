@@ -154,7 +154,7 @@
           box-sizing: border-box;
 
           .track_thumbnail {
-            width: 170px;
+            width: 140px;
             display: inline-block;
             margin: 0px 5px 0px 0px;
             color: @white;
@@ -168,8 +168,35 @@
 
       }
 
+      .track_detail_view_wrapper {
+
+        img {
+          width: 230px;
+          display: block;
+          margin: auto;
+        }
+
+      }
+
       .user_reviews {
         padding: 25px;
+      }
+
+      .user_reviews_reviewer_profile {
+        position: relative;
+
+        img {
+          width: 75px;
+          display: inline-block;
+        }
+
+        p {
+          width: 200px;
+          display: inline-block;
+          position: absolute;
+          top: 25px;
+        }
+
       }
 
     }
@@ -199,23 +226,23 @@
     }
     /* END USER NAV BAV */
 
-    .track_chooser_panel {
-      //width: 40%;
-      //height: 100vh;
-      overflow-y: scroll;
+    .track_chooser_reviews_wrapper {
 
-      img {
-        width: 130px;
+      .track_chooser_panel {
+        overflow-y: scroll;
+
+        img {
+          width: 130px;
+        }
+
       }
 
-    }
+      .track_detail_view_wrapper {
 
-    .track_detail_view_wrapper {
+        img {
+          width: 260px;
+        }
 
-      img {
-        width: 230px;
-        display: block;
-        margin: auto;
       }
 
     }
