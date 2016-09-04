@@ -44,7 +44,8 @@ class Post_Controller extends Page_Controller {
             new EmailField('Email'),
             new TextField('Name'),
             new TextField('Topic'),
-            new TextareaField('Post')
+            new TextareaField('Post'),
+            new HiddenField('Approved','','1')
         );
 
         $actions = new FieldList (
@@ -83,7 +84,9 @@ class Post_Controller extends Page_Controller {
 
     // get all Posts
     public function submittedPosts() {
-        $posts = Posts::get();
+        $posts = Posts::get()->filter(array(
+            'Approved' => '1'
+        ));
 
         return $posts;
     }

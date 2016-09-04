@@ -14,7 +14,15 @@ class Posts extends DataObject {
         'Email' => 'Varchar',
         'Name' => 'Varchar',
         'Topic' => 'Varchar',
-        'Post' => 'Text'
+        'Post' => 'Text',
+        'Approved' => 'Boolean'
+    );
+
+    private static $summary_fields = array (
+        'Email' => 'Email',
+        'Name' => 'Name',
+        'Topic' => 'Topic',
+        'Approved' => 'Post approved?'
     );
 
 }
