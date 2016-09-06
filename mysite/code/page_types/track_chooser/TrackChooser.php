@@ -105,4 +105,11 @@ class TrackChooser_Controller extends Page_Controller {
 
     }
 
+    // get all reviews
+    public function submittedTrackReviews() {
+        $reviews = Reviews::get();
+
+        return $reviews;
+    }
+
 }

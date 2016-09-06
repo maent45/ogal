@@ -63,7 +63,4 @@ class Track extends DataObject {
         'track_name' => 'Track name'
     );
 
-    static $singular_name = "Add Extra Product Gallery Image";
-//    static $plural_name = "Add Extra Product Gallery Images";
-
 }

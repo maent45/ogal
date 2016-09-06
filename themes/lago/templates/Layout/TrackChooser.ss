@@ -85,14 +85,23 @@
     <!--- user reviews section --->
     <div class="user_reviews">
         $Form
-        <%--<h3>User Reviews</h3>--%>
-        <%--<div class="user_reviews_reviewer_profile">--%>
-            <%--<img src="$ThemeDir/images/spiderman-icon.png">--%>
-            <%--<p>Boy Spiderman</p>--%>
-        <%--</div>--%>
-        <%--<div class="user_reviews_review">--%>
-            <%--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>--%>
-        <%--</div>--%>
+
+        <% if $submittedTrackReviews %>
+            <ul>
+                <% loop $submittedTrackReviews %>
+                    <li id="$TrackID">
+                        <div class="user_reviews_reviewer_profile">
+                            <img src="$ThemeDir/images/spiderman-icon.png">
+                            <p>$Name</p>
+                        </div>
+                        <div class="user_reviews_reivews">
+                            <p>$Review</p>
+                        </div>
+                    </li>
+                <% end_loop %>
+            </ul>
+        <% end_if %>
+
     </div>
 
 </div>
