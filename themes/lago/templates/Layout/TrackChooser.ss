@@ -84,7 +84,6 @@
 
     <!--- user reviews section --->
     <div class="user_reviews">
-        $Form
 
         <% if $submittedTrackReviews %>
             <ul>
@@ -101,6 +100,9 @@
                 <% end_loop %>
             </ul>
         <% end_if %>
+
+        <!--- reviews form --->
+        $Form
 
     </div>
 
