@@ -5,7 +5,7 @@
  *
  */
 
-class Review extends DataObject {
+class Reviews extends DataObject {
 
     private static $has_one = array (
         'Track' => 'Track'
@@ -14,6 +14,11 @@ class Review extends DataObject {
     private static $db = array (
         'Name' => 'Varchar',
         'Review' => 'Text'
+    );
+
+    private static $summary_fields = array (
+        'Name' => 'Name',
+        'Review' => 'Topic'
     );
 
 }

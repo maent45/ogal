@@ -9,7 +9,7 @@ class Track extends DataObject {
     );
 
     private static $has_many = array (
-        'Reviews' => 'Review'
+        'Reviews' => 'Reviews'
     );
 
 	private static $db = array (

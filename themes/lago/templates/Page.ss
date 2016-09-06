@@ -26,6 +26,7 @@
         <script type="text/javascript" src="{$ThemeDir}/javascript/custom.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=$maps_api_key"></script>
         <script type="text/javascript" src="{$ThemeDir}/javascript/track_chooser/track_address_geocoding.js"></script>
+    <script type="text/javascript" src="{$ThemeDir}/javascript/track_chooser/track_review_track_id.js"></script>
 
         <script>
             function initialize() {

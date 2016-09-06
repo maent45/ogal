@@ -84,14 +84,15 @@
 
     <!--- user reviews section --->
     <div class="user_reviews">
-        <h3>User Reviews</h3>
-        <div class="user_reviews_reviewer_profile">
-            <img src="$ThemeDir/images/spiderman-icon.png">
-            <p>Boy Spiderman</p>
-        </div>
-        <div class="user_reviews_review">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        </div>
+        $Form
+        <%--<h3>User Reviews</h3>--%>
+        <%--<div class="user_reviews_reviewer_profile">--%>
+            <%--<img src="$ThemeDir/images/spiderman-icon.png">--%>
+            <%--<p>Boy Spiderman</p>--%>
+        <%--</div>--%>
+        <%--<div class="user_reviews_review">--%>
+            <%--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>--%>
+        <%--</div>--%>
     </div>
 
 </div>

@@ -57,7 +57,8 @@ class TrackChooser_Controller extends Page_Controller {
         // create form fields
         $fields = new FieldList (
             new TextField('Name'),
-            new TextareaField('Review')
+            new TextareaField('Review'),
+            new HiddenField('TrackID','','1')
         );
 
         $actions = new FieldList (
@@ -80,6 +81,27 @@ class TrackChooser_Controller extends Page_Controller {
          *
          * */
         return new Form($this, 'Form', $fields, $actions, $validator);
+
+    }
+
+    /*
+     *
+     * @params:
+     * $data -> data returned from form
+     * $form -> form
+     *
+     * */
+    public function submit($data, $form) {
+
+        // set instance of Reviews object
+        $review_submission = new Reviews();
+
+        $review_submission->write();
+        $form->saveInto($review_submission);
+        $review_submission->write();
+
+        // redirect user when form submitted
+        return $this->redirectBack();
 
     }
 
