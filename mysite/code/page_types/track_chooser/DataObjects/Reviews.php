@@ -18,7 +18,7 @@ class Reviews extends DataObject {
 
     private static $summary_fields = array (
         'Name' => 'Name',
-        'Review' => 'Topic'
+        'Review' => 'Review'
     );
 
 }

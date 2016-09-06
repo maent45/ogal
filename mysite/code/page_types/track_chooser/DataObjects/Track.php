@@ -23,6 +23,9 @@ class Track extends DataObject {
 	);
 
 	public function getCMSFields() {
+
+        $conf = GridFieldConfig_RelationEditor::create(10);
+
         $fields = FieldList::create(
 
             TextField::create('track_name', 'Track name'),
@@ -40,7 +43,16 @@ class Track extends DataObject {
             TextField::create('time', 'Time'),
             CheckBoxField::create('dogs_allowed', 'Dogs allowed on this track?'),
             TextField::create('maps_address', 'Address')->setRightTitle('Used to create location marker on map'),
-            HtmlEditorField::create('track_desc', 'Track description')
+            HtmlEditorField::create('track_desc', 'Track description'),
+
+            // reviews
+            HeaderField::create('Track reviews'),
+            GridField::create(
+                'Reviews',
+                'All Reviews',
+                $this->Reviews(),
+                $conf
+            )
 
         );
 
