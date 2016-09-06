@@ -12,7 +12,7 @@ class Review extends DataObject {
     );
 
     private static $db = array (
-        'Reviewer_name' => 'Varchar',
+        'Name' => 'Varchar',
         'Review' => 'Text'
     );
 

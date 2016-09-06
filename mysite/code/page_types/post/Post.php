@@ -62,10 +62,12 @@ class Post_Controller extends Page_Controller {
     }
 
     /*
+     *
      * Collect post data.
      * function name has to be same as $actions Formaction first argument
      * @param $data -> data passed to the form as an indexed array
      * @param $form -> the form itself
+     *
      * */
 
     public function submit($data, $form) {

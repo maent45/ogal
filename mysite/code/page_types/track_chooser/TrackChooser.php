@@ -47,4 +47,40 @@ class TrackChooser extends Page {
 
 class TrackChooser_Controller extends Page_Controller {
 
+    // set methods accessible on page URL
+    private static $allowed_actions = array (
+        'Form'
+    );
+
+    public function Form() {
+
+        // create form fields
+        $fields = new FieldList (
+            new TextField('Name'),
+            new TextareaField('Review')
+        );
+
+        $actions = new FieldList (
+            // set form action name and button label
+            new FormAction('submit', 'Comment')
+        );
+
+        // set required fields
+        $validator = new RequiredFields('Name', 'Review');
+
+        // create the form object and return it
+        /*
+         *
+         * @params:
+         * $this -> this controller
+         * Form -> Form function name
+         * $fields -> form fields
+         * $actions -> form submit action
+         * $validator -> required fields
+         *
+         * */
+        return new Form($this, 'Form', $fields, $actions, $validator);
+
+    }
+
 }
